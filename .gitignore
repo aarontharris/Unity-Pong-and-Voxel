@@ -6,3 +6,7 @@
 *.csproj
 *.unityproj
 *.sln
+
+# Mac OSX
+.DS_Store
+
