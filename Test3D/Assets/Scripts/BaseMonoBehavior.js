@@ -24,6 +24,7 @@ class BaseMonoBehavior extends MonoBehaviour {
 		if ( game == null ) {
 			game = getGlobalObject().GetComponent( MBGame );
 		}
+		
 		return game;
 	}
 }

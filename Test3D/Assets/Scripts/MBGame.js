@@ -4,8 +4,9 @@
 @script RequireComponent( MBPrefabMapper );
 
 public class MBGame extends BaseMonoBehavior {
+//	private var messaging : 
 	private var prefabMapper : MBPrefabMapper; // initialized via initGame()
-	
+	private var blockEngine : BlockEngine;
 	public final var blockSize : double = 1;
 
 	function Awake() {
@@ -18,12 +19,14 @@ public class MBGame extends BaseMonoBehavior {
 	}
 
 	function Start () {
+		blockEngine.doStart();
 	}
 
 	function Update () {
 		if ( Input.GetButton( "Menu" ) ) {
 			Application.Quit();
 		}
+		blockEngine.doUpdate();
 	}
 	
 	// Tests only run in debug mode to help identify code folleys
@@ -41,11 +44,13 @@ public class MBGame extends BaseMonoBehavior {
 	}
 		
 	function initGame() {
+		// lock the mouse
+		Screen.lockCursor = true;
+		
 		prefabMapper = gameObject.GetComponent( MBPrefabMapper );
 		prefabMapper.init();
 		
-		// lock the mouse
-		Screen.lockCursor = true;
+		blockEngine = new BlockEngine( this );
 	}
 	
 	function initPlayer() {

@@ -1,6 +1,12 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace />
-  <MonoDevelop.Ide.Workbench />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/MBInitialVelocity3d.js">
+    <Files>
+      <File FileName="Assets/Scripts/MBGame.js" Line="18" Column="12" />
+      <File FileName="Assets/Scripts/BlockEngine.js" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/MBInitialVelocity3d.js" Line="1" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
